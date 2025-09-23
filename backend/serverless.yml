@@ -1,0 +1,30 @@
+service: items-backend
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: ap-south-1
+  environment:
+    DB_HOST: ${env:DB_HOST}
+    DB_USER: ${env:DB_USER}
+    DB_PASSWORD: ${env:DB_PASSWORD}
+    DB_NAME: ${env:DB_NAME}
+
+functions:
+  api:
+    handler: lambda_handlers/api.lambda_handler
+    events:
+      - httpApi:
+          path: /items
+          method: GET
+      - httpApi:
+          path: /items
+          method: POST
+
+plugins:
+  - serverless-python-requirements
+  - serverless-dotenv-plugin
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
