@@ -1,0 +1,22 @@
+{
+"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+"projects": {
+"frontend": {
+"root": "",
+"sourceRoot": "src",
+"projectType": "application",
+"architect": {
+"build": {
+"builder": "@angular-devkit/build-angular:browser",
+"options": {
+"outputPath": "dist/frontend",
+"index": "src/index.html",
+"main": "src/main.ts",
+"polyfills": "src/polyfills.ts",
+"tsConfig": "tsconfig.app.json"
+}
+}
+}
+}
+}
+}
