@@ -1,0 +1,11 @@
+cd backend
+npm install
+sls deploy
+
+
+=================================
+## npm install --save-dev serverless-offline
+## plugins:
+##  - serverless-python-requirements
+##  - serverless-dotenv-plugin
+##  - serverless-offline
