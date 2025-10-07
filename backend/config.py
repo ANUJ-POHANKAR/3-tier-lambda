@@ -1,0 +1,4 @@
+# config.py
+# Simulated third-party API tokens
+GOOGLE_API_KEY = "AIzaFakeGoogleKey_XXXXXXXXXXXXXXXXXXXX"
+SENDGRID_API_KEY = "SG.FAKE-SENDGRID-KEY-1234567890"
