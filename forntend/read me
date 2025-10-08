@@ -1,7 +1,0 @@
-cd frontend
-npm install
-ng build --prod
-ls dist/
-aws s3 sync dist/ s3://your-bucket-name --delete ## Upload dist/ to S3 for hosting:
-npx serve -s dist/    ## npx serve -s dist/
-
